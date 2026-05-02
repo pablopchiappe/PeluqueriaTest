@@ -12,6 +12,28 @@ fetch('config.json')
     const set = (id, text) => { const el = document.getElementById(id); if (el) el.textContent = text; };
     const href = (id, url) => { const el = document.getElementById(id); if (el) el.href = url; };
 
+    // Tipografía
+    const tip = cfg.tipografias?.[cfg.tipografia];
+    if (tip) {
+      const link = document.querySelector('link[href*="fonts.googleapis.com"]');
+      if (link) link.href = tip.googleFonts;
+      const root = document.documentElement.style;
+      root.setProperty('--font-head', tip['font-head']);
+      root.setProperty('--font-body', tip['font-body']);
+    }
+
+    // Imagen de fondo del hero
+    if (cfg.heroImg) {
+      document.documentElement.style.setProperty('--hero-img', `url('${cfg.heroImg}')`);
+    }
+
+    // Paleta de colores
+    const paleta = cfg.paletas?.[cfg.paleta];
+    if (paleta) {
+      const root = document.documentElement.style;
+      Object.entries(paleta).forEach(([k, v]) => root.setProperty(`--${k}`, v));
+    }
+
     document.getElementById('page-title').textContent = cfg.nombre;
     document.querySelector('meta[name="description"]').content = cfg.descripcion ?? '';
 
