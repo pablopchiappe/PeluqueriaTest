@@ -7,6 +7,10 @@ fetch('config.json')
     document.getElementById('page-title').textContent = cfg.nombre;
     document.querySelector('meta[name="description"]').content = cfg.descripcion ?? '';
 
+    const navLogo = document.getElementById('nav-logo');
+    if (navLogo && cfg.logo) { navLogo.src = cfg.logo; navLogo.alt = cfg.nombre; }
+    else if (navLogo) navLogo.style.display = 'none';
+
     set('nav-nombre',   cfg.nombre);
     set('hero-nombre',  cfg.nombre);
     set('hero-slogan',  cfg.slogan);
@@ -25,7 +29,9 @@ fetch('config.json')
     if (grid && cfg.servicios) {
       grid.innerHTML = cfg.servicios.map(s => `
         <div class="servicio-card">
-          <div class="servicio-card__icono">${s.icono}</div>
+          <div class="servicio-card__icono">
+            <img src="${s.icono}" alt="${s.nombre}" />
+          </div>
           <h3 class="servicio-card__nombre">${s.nombre}</h3>
           <p class="servicio-card__desc">${s.descripcion}</p>
         </div>`).join('');

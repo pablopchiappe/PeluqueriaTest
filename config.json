@@ -1,5 +1,6 @@
 {
-  "nombre": "Studio Nombre",
+  "nombre": "Robert Style",
+  "logo": "imagenes/logo.png",
   "slogan": "Tu estilo, nuestra pasión",
   "descripcion": "Más de 10 años transformando looks. Reservá tu turno online y viví la experiencia.",
   "appUrl": "#",
@@ -7,8 +8,8 @@
   "contacto": {
     "telefono": "+54 11 1234-5678",
     "whatsapp": "5491112345678",
-    "email": "hola@studionombre.com",
-    "instagram": "studionombre",
+    "email": "hola@robertstyle.com",
+    "instagram": "robertstyle",
     "direccion": "Av. Corrientes 1234, Buenos Aires",
     "mapsUrl": "https://maps.google.com/?q=Av.+Corrientes+1234+Buenos+Aires"
   },
@@ -21,22 +22,22 @@
 
   "servicios": [
     {
-      "icono": "✂️",
+      "icono": "imagenes/corte.png",
       "nombre": "Corte",
       "descripcion": "Corte personalizado para hombre y mujer con consulta de estilo incluida."
     },
     {
-      "icono": "🎨",
+      "icono": "imagenes/color.png",
       "nombre": "Color",
       "descripcion": "Tinte, mechas, balayage y decoloración con productos de primera línea."
     },
     {
-      "icono": "💧",
+      "icono": "imagenes/tratamientos.png",
       "nombre": "Tratamientos",
       "descripcion": "Hidratación profunda, keratina y nutrición capilar para tu tipo de cabello."
     },
     {
-      "icono": "💅",
+      "icono": "imagenes/peinados.png",
       "nombre": "Peinados",
       "descripcion": "Peinados para eventos, bodas y ocasiones especiales."
     }

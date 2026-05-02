@@ -15,7 +15,15 @@
   <!-- NAV -->
   <header class="nav">
     <div class="container nav__inner">
-      <span class="nav__logo" id="nav-nombre"></span>
+      <div class="nav__logo">
+        <img id="nav-logo" src="" alt="Logo" />
+        <span id="nav-nombre"></span>
+      </div>
+      <nav class="nav__links">
+        <a href="#servicios">Servicios</a>
+        <a href="#info">Horarios</a>
+        <a href="#info">Contacto</a>
+      </nav>
       <a href="#" id="nav-cta" class="btn btn--outline">Reservar turno</a>
     </div>
   </header>
@@ -29,6 +37,9 @@
       <p class="hero__desc" id="hero-desc"></p>
       <a href="#" id="hero-cta" class="btn btn--primary">Reservar turno →</a>
     </div>
+    <a href="#servicios" class="hero__scroll-hint" aria-label="Ver servicios">
+      <span></span>
+    </a>
   </section>
 
   <!-- SERVICIOS -->

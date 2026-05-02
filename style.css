@@ -68,15 +68,32 @@ img { max-width: 100%; display: block; }
   justify-content: space-between;
 }
 .nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-family: var(--font-head);
   font-size: 1.4rem;
   font-weight: 600;
   letter-spacing: .02em;
 }
+.nav__logo img { height: 40px; width: auto; object-fit: contain; }
+
+/* ── Nav links ──────────────────────────────────────────────── */
+.nav__links {
+  display: flex;
+  gap: 28px;
+  font-size: .875rem;
+  font-weight: 500;
+  letter-spacing: .03em;
+}
+.nav__links a { color: var(--text-muted); transition: color .15s; }
+.nav__links a:hover { color: var(--accent); }
+@media (max-width: 600px) { .nav__links { display: none; } }
 
 /* ── Hero ───────────────────────────────────────────────────── */
 .hero {
   min-height: calc(100vh - var(--nav-h));
+  position: relative;
   display: flex;
   align-items: center;
   padding: 80px 0;
@@ -112,6 +129,37 @@ img { max-width: 100%; display: block; }
   color: var(--text-muted);
   margin-bottom: 36px;
   max-width: 480px;
+}
+
+/* ── Hero scroll hint ───────────────────────────────────────── */
+.hero__scroll-hint {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  animation: arrow-bounce 1.6s ease-in-out infinite;
+}
+.hero__scroll-hint span,
+.hero__scroll-hint span::after {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-right: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
+  transform: rotate(45deg);
+  content: '';
+}
+.hero__scroll-hint span::after {
+  margin-top: -8px;
+  opacity: .4;
+}
+@keyframes arrow-bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(8px); }
 }
 
 /* ── Sections ───────────────────────────────────────────────── */
@@ -152,7 +200,8 @@ img { max-width: 100%; display: block; }
   transform: translateY(-4px);
   box-shadow: var(--shadow);
 }
-.servicio-card__icono { font-size: 2rem; margin-bottom: 16px; }
+.servicio-card__icono { margin-bottom: 16px; }
+.servicio-card__icono img { width: 192px; height: 192px; object-fit: contain; }
 .servicio-card__nombre {
   font-family: var(--font-head);
   font-size: 1.3rem;
