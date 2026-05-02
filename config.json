@@ -1,0 +1,44 @@
+{
+  "nombre": "Studio Nombre",
+  "slogan": "Tu estilo, nuestra pasión",
+  "descripcion": "Más de 10 años transformando looks. Reservá tu turno online y viví la experiencia.",
+  "appUrl": "#",
+
+  "contacto": {
+    "telefono": "+54 11 1234-5678",
+    "whatsapp": "5491112345678",
+    "email": "hola@studionombre.com",
+    "instagram": "studionombre",
+    "direccion": "Av. Corrientes 1234, Buenos Aires",
+    "mapsUrl": "https://maps.google.com/?q=Av.+Corrientes+1234+Buenos+Aires"
+  },
+
+  "horarios": [
+    { "dias": "Lunes a Viernes", "horario": "09:00 – 20:00" },
+    { "dias": "Sábados",         "horario": "09:00 – 17:00" },
+    { "dias": "Domingos",        "horario": "Cerrado" }
+  ],
+
+  "servicios": [
+    {
+      "icono": "✂️",
+      "nombre": "Corte",
+      "descripcion": "Corte personalizado para hombre y mujer con consulta de estilo incluida."
+    },
+    {
+      "icono": "🎨",
+      "nombre": "Color",
+      "descripcion": "Tinte, mechas, balayage y decoloración con productos de primera línea."
+    },
+    {
+      "icono": "💧",
+      "nombre": "Tratamientos",
+      "descripcion": "Hidratación profunda, keratina y nutrición capilar para tu tipo de cabello."
+    },
+    {
+      "icono": "💅",
+      "nombre": "Peinados",
+      "descripcion": "Peinados para eventos, bodas y ocasiones especiales."
+    }
+  ]
+}
