@@ -93,6 +93,7 @@ img { max-width: 100%; display: block; }
 /* ── Hero ───────────────────────────────────────────────────── */
 .hero {
   min-height: calc(100vh - var(--nav-h));
+  min-height: calc(100dvh - var(--nav-h));
   position: relative;
   display: flex;
   align-items: center;
@@ -261,7 +262,9 @@ img { max-width: 100%; display: block; }
 
 /* ── Responsive ─────────────────────────────────────────────── */
 @media (max-width: 480px) {
-  .hero { padding: 48px 0; }
+  .hero { padding: 48px 0 80px; }
   .section { padding: 64px 0; }
-  .nav__logo { font-size: 1.2rem; }
+  .nav__logo { font-size: 1.1rem; }
+  .nav__logo img { height: 28px; }
+  #nav-cta { padding: 8px 14px; font-size: .78rem; letter-spacing: .02em; }
 }

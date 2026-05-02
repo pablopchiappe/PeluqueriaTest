@@ -1,3 +1,11 @@
+// Scroll suave sin modificar la URL (evita que al reabrir la página salte a una sección)
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+  });
+});
+
 fetch('config.json')
   .then(r => r.json())
   .then(cfg => {
